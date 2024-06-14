@@ -16,7 +16,7 @@ class Student:
     def get_name(self):
         return self.name
     def get_dob(self):
-        return dob
+        return self.dob
     def get_rollnum(self):
         return self.rollnum
     def get_gpa(self):
