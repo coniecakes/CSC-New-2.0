@@ -68,11 +68,11 @@ class Roster:
             if i.isDeansList():
                 deanslist.append(i)
         return deanslist
-    def __str__(self):
-        str1 = "This is the Dean's List:\n "
-        str2 = deanslist
-        retstr = str1 + str2
-        return retstr
+    # def __str__(self):
+    #     str1 = "This is the Dean's List:\n "
+    #     str2 = deanslist
+    #     retstr = str1 + str2
+    #     return retstr
 
 john = Student("John Bon Jovi", 11/11/2002, "M", "AU13579", "Accounting", 3.71)
 jane = Student("Jane Doe", 4/20/1999,"F", "AU2468", "Accounting", 3.92)

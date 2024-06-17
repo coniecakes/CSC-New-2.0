@@ -18,28 +18,28 @@ class Roster:
                 deanslist.append(i)
         return deanslist
 
-#create a new student
-john = Student('John', '1/1/2000', 'm', 'AU123', 'compsci', 3.4)
-
-#create an object of  the Roster class
-compsci = Roster()
-
-#add the student to the roster
-compsci.add_student(john)
-
-list1 = compsci.get_roster_list()
-
+# #create a new student
+# john = Student('John', '1/1/2000', 'm', 'AU123', 'compsci', 3.4)
 #
-#create and add another student
-jane = Student('Jane', '1/1/2000', 'm', 'AU124', 'compsci', 3.9)
-compsci.add_student(jane)
-
-narendra = Student ('ND', '1/1/2000', 'm', 'AU100', 'compsci', 3.9)
-compsci.add_student(narendra)
-
-# for i in compsci.get_roster_list():
+# #create an object of  the Roster class
+# compsci = Roster()
+#
+# #add the student to the roster
+# compsci.add_student(john)
+#
+# list1 = compsci.get_roster_list()
+#
+# #
+# #create and add another student
+# jane = Student('Jane', '1/1/2000', 'm', 'AU124', 'compsci', 3.9)
+# compsci.add_student(jane)
+#
+# narendra = Student ('ND', '1/1/2000', 'm', 'AU100', 'compsci', 3.9)
+# compsci.add_student(narendra)
+#
+# # for i in compsci.get_roster_list():
+# #       print (i)
+#
+# deanslist = compsci.get_deanslist()
+# for i in deanslist:
 #       print (i)
-
-deanslist = compsci.get_deanslist()
-for i in deanslist:
-      print (i)
