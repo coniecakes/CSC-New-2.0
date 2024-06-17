@@ -1,6 +1,3 @@
-# import Student
-# from student module import Student
-
 class Student:
     def __init__(self, name, dob, gender, rollnum, major, gpa=0.0):
         self.name = name
@@ -58,6 +55,12 @@ class Roster:
 
     def add_student(self, student):
         self.roster_list.append(student)
+    def add_accounting_list(self):
+        accounting_maj = []
+        for student in self.roster_list:
+            if student.get_major() == "Accounting":
+                accounting_maj.append(student)
+        return accounting_maj
 
     def get_deanslist(self):
         deanslist = []
@@ -74,18 +77,31 @@ class Roster:
 john = Student("John Bon Jovi", 11/11/2002, "M", "AU13579", "Accounting", 3.71)
 jane = Student("Jane Doe", 4/20/1999,"F", "AU2468", "Accounting", 3.92)
 conie = Student("Conie O'Malley", 6/19/1992, "NB", "AU12345","Accounting", 3.80)
+jackson = Student("Jackson T", 1/5/2004, "M", "AU23456", "Biochemistry",4.0)
+mathew = Student("Mathew H", 9/11/2001, "M", "AU34567","Business", 2.75)
 
-Accounting = Roster()
-History = Roster()
-Accounting.add_student(john)
-Accounting.add_student(jane)
-Accounting.add_student(conie)
+# Accounting = Roster()
+roster = Roster()
+roster.add_student(john)
+roster.add_student(jane)
+roster.add_student(conie)
+roster.add_student(jackson)
+roster.add_student(mathew)
+# Accounting.add_student(john)
+# Accounting.add_student(jane)
+# Accounting.add_student(conie)
 conie.set_gpa(3.95)
-
-list1 = Accounting.get_roster_list()
-print(list1)
-print()
-deanslist = Accounting.get_deanslist()
-for i in deanslist:
-    print(i)
-
+accounting_students = roster.add_accounting_list()
+deans_list_students = roster.get_deanslist()
+print("Accounting Students:\n")
+for student in accounting_students:
+    print(student)
+print("\nDean's List Students:\n")
+for student in deans_list_students:
+    print(student)
+# list1 = Accounting.get_roster_list()
+# print(list1)
+# print()
+# deanslist = Accounting.get_deanslist()
+# for i in deanslist:
+#     print(i)
