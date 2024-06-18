@@ -71,3 +71,17 @@ elif grade <= 100:
      print("A")
 else:
      print("Invalid grade")
+
+# Prof's code for prime number problem
+list1 = []
+remove = 0
+for x in range (2,100):
+    remove = 0
+    list1.append(x)
+    for y in range (2,x):
+        if x%y==0:
+            remove = 1
+    if remove:
+        list1.remove(x)
+
+print (list1)
